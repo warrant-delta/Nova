@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Proxy</title>
+
+    <!-- UV and BareMux Scripts -->
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="/baremux/index.js"></script>
+
+    <!-- Register Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", async () => {
+                await navigator.serviceWorker.register("/uv/sw.js");
+            });
+        }
+    </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+
+    <!-- URL Input & Search Button -->
+    <div id="toolbar">
+        <input type="text" id="urlInput" placeholder="Enter URL here">
+        <button id="searchButton">Search Text</button>
+        <select id="switcher">
+            <option value="">--Please Choose an Option--</option>
+            <option value="epoxy">Epoxy</option>
+            <option value="bare">Bare</option>
+        </select>
+    </div>
+
+    <!-- Main Iframe Display -->
+    <iframe id="iframeWindow" class="iframeWindow"></iframe>
+
+    <!-- App Logic -->
+    <script src="example.js"></script>
+</body>
+</html>

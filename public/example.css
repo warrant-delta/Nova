@@ -1,0 +1,83 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    overflow: hidden;
+}
+
+/* Iframe Window */
+.iframeWindow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    border: none;
+    background-color: #141414;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 1;
+}
+
+/* URL Input */
+#urlInput {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    width: 65vw;
+    height: 6vh;
+    padding-left: 1em;
+    font-size: 1.4em;
+    color: #e0f7ff;
+    background-color: #1f1f26;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+    z-index: 999;
+}
+
+/* Search Button */
+#searchButton {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 20vw;
+    height: 6vh;
+    font-size: 1.4em;
+    background-color: #00ffff;
+    color: #141414;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    z-index: 999;
+}
+
+#searchButton:hover {
+    background-color: #00d9d9;
+}
+
+/* Transport Switcher Dropdown */
+#switcher {
+    position: absolute;
+    top: 10vh;
+    left: 2vw;
+    width: 25vw;
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 10px;
+    background-color: #1f1f26;
+    color: #e0f7ff;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.1);
+    z-index: 999;
+}
